@@ -4,7 +4,7 @@ struct LocalEsimResponse: Decodable {
     let id: Int
     let slug: String
     let title: String
-    let image: Image
+    let image: RemoteImage
     let seo: SEO?
     let packageCount: Int
 

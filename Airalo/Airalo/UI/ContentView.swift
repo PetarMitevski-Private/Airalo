@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Airalo
-//
-//  Created by Petar Mitevski on 7.5.25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
