@@ -4,7 +4,7 @@ struct CountryPackages: Decodable {
     let id: Int
     let slug: String
     let title: String
-    let image: Image
+    let image: RemoteImage
     let seo: String?
     let packages: [Package]
 }
@@ -64,7 +64,7 @@ struct Operator: Decodable {
     let apn: String?
     let networks: [Network]
     let info: [String]
-    let image: Image
+    let image: RemoteImage
     let countries: [CountryReference]
 
     enum CodingKeys: String, CodingKey {
@@ -108,5 +108,5 @@ struct CountryReference: Decodable {
     let id: Int
     let slug: String
     let title: String
-    let image: Image
+    let image: RemoteImage
 }
