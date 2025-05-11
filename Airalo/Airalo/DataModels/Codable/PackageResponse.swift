@@ -1,4 +1,4 @@
-struct PackageResponse: Decodable {
+struct PackageResponse: Codable, Equatable {
     let id: Int
     let slug: String
     let type: String
