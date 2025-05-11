@@ -33,7 +33,7 @@ final class Model: ModelType {
                 switch completion {
                 case .finished:
                     break
-                case let .failure(error):
+                case .failure:
                     _countryPackagesStateSubject.send(.error)
                 }
             }, receiveValue: { [weak self] response in
@@ -54,7 +54,7 @@ final class Model: ModelType {
                 switch completion {
                 case .finished:
                     break
-                case let .failure(error):
+                case .failure:
                     _localESimState.send(.error)
                 }
             }, receiveValue: { [weak self] response in
@@ -62,5 +62,16 @@ final class Model: ModelType {
                 self._localESimState.send(.success(data: response))
             })
             .store(in: &cancellables)
+    }
+    
+    func eventOccurred(_ event: Event) {
+        switch event {
+        case .refreshCountryList:
+            getLocalEsims()
+        case let .refreshPackagesList(id):
+            getCountryPackagesState(for: id)
+        case let .clickedBuyPackage(id):
+            print("Unimplemented feature, user clicked on Buy Package with id: \(id)")
+        }
     }
 }

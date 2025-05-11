@@ -6,4 +6,6 @@ protocol ModelType  {
     var countryPackagesStateSubject: AnyPublisher<CountryPackagesResponseState, Never> { get }
     
     func getCountryPackagesState(for countryId: Int)
+    
+    func eventOccurred(_ event: Event)
 }
