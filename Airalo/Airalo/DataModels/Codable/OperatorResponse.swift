@@ -1,4 +1,4 @@
-struct OperatorResponse: Decodable {
+struct OperatorResponse: Codable, Equatable {
     let id: Int
     let title: String
     let style: String

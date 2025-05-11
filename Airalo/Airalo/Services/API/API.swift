@@ -1,6 +1,6 @@
 import Foundation
 
-enum API {
+enum API: Hashable {
     case localESims
     case countryPackages(id: Int)
     
