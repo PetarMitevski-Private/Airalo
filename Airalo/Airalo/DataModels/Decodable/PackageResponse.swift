@@ -8,7 +8,7 @@ struct PackageResponse: Decodable {
     let validity: String
     let day: Int
     let amount: Int
-    let operatorInfo: OperatorResponse?
+    let operatorInfo: OperatorResponse
 
     enum CodingKeys: String, CodingKey {
         case id

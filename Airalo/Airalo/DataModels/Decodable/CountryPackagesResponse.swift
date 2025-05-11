@@ -5,5 +5,5 @@ struct CountryPackagesResponse: Decodable {
     let slug: String
     let title: String
     let image: RemoteImage
-    let packages: [PackageResponse]?
+    let packages: [PackageResponse]
 }
