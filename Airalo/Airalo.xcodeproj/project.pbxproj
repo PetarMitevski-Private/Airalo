@@ -6,15 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EF1E7FE42DD0C24D0022AF4A /* AiraloUIFoundations in Frameworks */ = {isa = PBXBuildFile; productRef = EF1E7FE32DD0C24D0022AF4A /* AiraloUIFoundations */; };
+		EF1E80302DD10C540022AF4A /* AiraloUtils in Frameworks */ = {isa = PBXBuildFile; productRef = EF1E802F2DD10C540022AF4A /* AiraloUtils */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EF0DF0B02DCBE46B00E7C956 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EF0DF0992DCBE46900E7C956 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EF0DF0A02DCBE46900E7C956;
-			remoteInfo = Airalo;
-		};
-		EF0DF0BA2DCBE46C00E7C956 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EF0DF0992DCBE46900E7C956 /* Project object */;
 			proxyType = 1;
@@ -26,7 +24,6 @@
 /* Begin PBXFileReference section */
 		EF0DF0A12DCBE46900E7C956 /* Airalo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airalo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0DF0AF2DCBE46B00E7C956 /* AiraloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AiraloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF0DF0B92DCBE46C00E7C956 /* AiraloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AiraloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -53,11 +50,6 @@
 			path = AiraloTests;
 			sourceTree = "<group>";
 		};
-		EF0DF0BC2DCBE46C00E7C956 /* AiraloUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AiraloUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +57,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1E80302DD10C540022AF4A /* AiraloUtils in Frameworks */,
+				EF1E7FE42DD0C24D0022AF4A /* AiraloUIFoundations in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EF0DF0AC2DCBE46B00E7C956 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EF0DF0B62DCBE46C00E7C956 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -90,7 +77,6 @@
 			children = (
 				EF0DF0A32DCBE46900E7C956 /* Airalo */,
 				EF0DF0B22DCBE46B00E7C956 /* AiraloTests */,
-				EF0DF0BC2DCBE46C00E7C956 /* AiraloUITests */,
 				EF0DF0A22DCBE46900E7C956 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,7 +86,6 @@
 			children = (
 				EF0DF0A12DCBE46900E7C956 /* Airalo.app */,
 				EF0DF0AF2DCBE46B00E7C956 /* AiraloTests.xctest */,
-				EF0DF0B92DCBE46C00E7C956 /* AiraloUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +110,8 @@
 			);
 			name = Airalo;
 			packageProductDependencies = (
+				EF1E7FE32DD0C24D0022AF4A /* AiraloUIFoundations */,
+				EF1E802F2DD10C540022AF4A /* AiraloUtils */,
 			);
 			productName = Airalo;
 			productReference = EF0DF0A12DCBE46900E7C956 /* Airalo.app */;
@@ -153,29 +140,6 @@
 			productReference = EF0DF0AF2DCBE46B00E7C956 /* AiraloTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EF0DF0B82DCBE46C00E7C956 /* AiraloUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EF0DF0C92DCBE46C00E7C956 /* Build configuration list for PBXNativeTarget "AiraloUITests" */;
-			buildPhases = (
-				EF0DF0B52DCBE46C00E7C956 /* Sources */,
-				EF0DF0B62DCBE46C00E7C956 /* Frameworks */,
-				EF0DF0B72DCBE46C00E7C956 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EF0DF0BB2DCBE46C00E7C956 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				EF0DF0BC2DCBE46C00E7C956 /* AiraloUITests */,
-			);
-			name = AiraloUITests;
-			packageProductDependencies = (
-			);
-			productName = AiraloUITests;
-			productReference = EF0DF0B92DCBE46C00E7C956 /* AiraloUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,10 +157,6 @@
 						CreatedOnToolsVersion = 16.3;
 						TestTargetID = EF0DF0A02DCBE46900E7C956;
 					};
-					EF0DF0B82DCBE46C00E7C956 = {
-						CreatedOnToolsVersion = 16.3;
-						TestTargetID = EF0DF0A02DCBE46900E7C956;
-					};
 				};
 			};
 			buildConfigurationList = EF0DF09C2DCBE46900E7C956 /* Build configuration list for PBXProject "Airalo" */;
@@ -208,6 +168,9 @@
 			);
 			mainGroup = EF0DF0982DCBE46900E7C956;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EF1E7FE22DD0C24D0022AF4A /* XCLocalSwiftPackageReference "AiraloUIFoundations" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EF0DF0A22DCBE46900E7C956 /* Products */;
 			projectDirPath = "";
@@ -215,7 +178,6 @@
 			targets = (
 				EF0DF0A02DCBE46900E7C956 /* Airalo */,
 				EF0DF0AE2DCBE46B00E7C956 /* AiraloTests */,
-				EF0DF0B82DCBE46C00E7C956 /* AiraloUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -229,13 +191,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EF0DF0AD2DCBE46B00E7C956 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EF0DF0B72DCBE46C00E7C956 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -259,13 +214,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF0DF0B52DCBE46C00E7C956 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -273,11 +221,6 @@
 			isa = PBXTargetDependency;
 			target = EF0DF0A02DCBE46900E7C956 /* Airalo */;
 			targetProxy = EF0DF0B02DCBE46B00E7C956 /* PBXContainerItemProxy */;
-		};
-		EF0DF0BB2DCBE46C00E7C956 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EF0DF0A02DCBE46900E7C956 /* Airalo */;
-			targetProxy = EF0DF0BA2DCBE46C00E7C956 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -419,8 +362,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -430,10 +372,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Debug;
@@ -459,8 +402,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -470,10 +412,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Release;
@@ -524,50 +467,6 @@
 			};
 			name = Release;
 		};
-		EF0DF0CA2DCBE46C00E7C956 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CH9CU9CRRM;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				MACOSX_DEPLOYMENT_TARGET = 15.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.petarmitevski.AiraloUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = Airalo;
-				XROS_DEPLOYMENT_TARGET = 2.4;
-			};
-			name = Debug;
-		};
-		EF0DF0CB2DCBE46C00E7C956 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CH9CU9CRRM;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				MACOSX_DEPLOYMENT_TARGET = 15.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.petarmitevski.AiraloUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = Airalo;
-				XROS_DEPLOYMENT_TARGET = 2.4;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -598,16 +497,25 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF0DF0C92DCBE46C00E7C956 /* Build configuration list for PBXNativeTarget "AiraloUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EF0DF0CA2DCBE46C00E7C956 /* Debug */,
-				EF0DF0CB2DCBE46C00E7C956 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		EF1E7FE22DD0C24D0022AF4A /* XCLocalSwiftPackageReference "AiraloUIFoundations" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = AiraloUIFoundations;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF1E7FE32DD0C24D0022AF4A /* AiraloUIFoundations */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AiraloUIFoundations;
+		};
+		EF1E802F2DD10C540022AF4A /* AiraloUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AiraloUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF0DF0992DCBE46900E7C956 /* Project object */;
 }
