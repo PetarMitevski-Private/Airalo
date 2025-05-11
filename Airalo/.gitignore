@@ -6,7 +6,6 @@ DerivedData/
 
 # Ignore build products
 build/
-*.xcworkspace
 *.xcodeproj/project.xcworkspace/xcuserdata/
 
 # Ignore user-specific Xcode settings
