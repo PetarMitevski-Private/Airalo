@@ -1,19 +1,28 @@
 import SwiftUI
 import AiraloUIFoundations
 
+// MARK: - Internal Types
+
 enum PackageRowType {
     case data(value: String)
     case validity(value: String)
 }
 
 struct PackageSectionInfoRow: View {
+    
+    // MARK: - Private Properties
+    
     private let rowType: PackageRowType
     private let style: PackageViewDataModel.Style
+    
+    // MARK: - Initialiser
     
     init(rowType: PackageRowType, style: PackageViewDataModel.Style) {
         self.rowType = rowType
         self.style = style
     }
+    
+    // MARK: - Body
     
     var body: some View {
         HStack(spacing: .spacing10) {
@@ -32,6 +41,8 @@ struct PackageSectionInfoRow: View {
         .padding(.horizontal, .spacing20)
         .padding(.vertical, .spacing14)
     }
+    
+    // MARK: - Subviews
     
     private var rowTitle: String {
         switch rowType {

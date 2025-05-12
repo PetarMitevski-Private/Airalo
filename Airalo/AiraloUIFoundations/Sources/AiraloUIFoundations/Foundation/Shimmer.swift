@@ -1,9 +1,14 @@
 import SwiftUI
 
+/// A custom `ViewModifier` that adds a shimmering effect to a view.
 struct Shimmer: ViewModifier {
     
+    /// A flag to track the initial state of the shimmer effect.
     @State private var isInitialState: Bool = true
     
+    // MARK: - ViewModifier
+    
+    /// Modifies the content view by applying a shimmering effect.
     func body(content: Content) -> some View {
         content
             .mask {

@@ -3,21 +3,28 @@ import AiraloUIFoundations
 
 struct PackagesListView: View {
     
+    // MARK: - Internal Properties
+    
     @EnvironmentObject var packageListViewInteractor: PackageListViewInteractor
+    
+    // MARK: - Private Properties
     
     private let id: Int
     private let countryName: String
+    
+    // MARK: - Initialiser
     
     init(id: Int, countryName: String) {
         self.id = id
         self.countryName = countryName
     }
     
+    // MARK: - Body
     var body: some View {
         Group {
             switch packageListViewInteractor.packageListViewModel.state {
             case .loading:
-                contentView(data: .placeholder)
+                contentView(data: StaticModel.placeholderPackageListViewDataModel)
                     .redacted(reason: .placeholder)
                     .shimmering()
             case let .ready(data):
@@ -32,6 +39,8 @@ struct PackagesListView: View {
             packageListViewInteractor.didAppear(id: id)
         }
     }
+    
+    // MARK: - Subviews
     
     private func contentView(data: PackageListViewDataModel) -> some View {
         AiraloNavigationStack(title: countryName) {
@@ -50,19 +59,6 @@ struct PackagesListView: View {
             .background(Color.alabasterWhite)
         }
     }
-}
-
-private extension PackageListViewDataModel {
-    static let placeholder: PackageListViewDataModel = {
-        let packages = [
-            PackageViewDataModel(id: 0, name: "", countryName: "", data: "", validity: "", imageUrl: nil, price: "", startColor: .gray, endColor: .gray, style: .light),
-            PackageViewDataModel(id: 1, name: "", countryName: "", data: "", validity: "", imageUrl: nil, price: "", startColor: .gray, endColor: .gray, style: .light),
-            PackageViewDataModel(id: 2, name: "", countryName: "", data: "", validity: "", imageUrl: nil, price: "", startColor: .gray, endColor: .gray, style: .light),
-            PackageViewDataModel(id: 3, name: "", countryName: "", data: "", validity: "", imageUrl: nil, price: "", startColor: .gray, endColor: .gray, style: .light)
-        ]
-        
-        return PackageListViewDataModel(id: 0, title: "", packages: packages)
-    }()
 }
 
 #Preview {

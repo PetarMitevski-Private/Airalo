@@ -2,15 +2,21 @@ import SwiftUI
 import AiraloUIFoundations
 
 struct PackageView: View {
+    
+    // MARK: - Private Properties
+    
     private let package: PackageViewDataModel
     private let buyPackage: (Int) -> Void
     @State private var parentWidth: CGFloat = 0
 
+    // MARK: - Initiliser
+    
     init(package: PackageViewDataModel, buyPackage: @escaping (Int) -> Void) {
         self.package = package
         self.buyPackage = buyPackage
     }
 
+    // MARK: - Body
     var body: some View {
         ZStack(alignment: .topTrailing) {
             backgroundGradient
@@ -112,6 +118,8 @@ struct PackageView: View {
                 }
         }
     }
+    
+    // MARK: - Helpers
     
     private var styleColor: AiraloColor {
         switch package.style {
