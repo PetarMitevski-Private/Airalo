@@ -1,7 +1,7 @@
 import SwiftUI
 import AiraloUIFoundations
 
-struct PackagesView: View {
+struct PackagesListView: View {
     
     @EnvironmentObject var packageListViewInteractor: PackageListViewInteractor
     
@@ -63,4 +63,9 @@ private extension PackageListViewDataModel {
         
         return PackageListViewDataModel(id: 0, title: "", packages: packages)
     }()
+}
+
+#Preview {
+    PackagesListView(id: 1, countryName: "Coutry Name")
+        .environmentObject(PackageListViewInteractor(model: StaticModel()))
 }

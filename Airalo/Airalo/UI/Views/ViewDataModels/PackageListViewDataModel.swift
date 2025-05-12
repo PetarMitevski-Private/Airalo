@@ -1,12 +1,12 @@
 import Foundation
 import SwiftUI
 
-struct PackageListViewDataModel {
+struct PackageListViewDataModel: Equatable {
     let id: Int
     let title: String
     let packages: [PackageViewDataModel]
     
-    struct PackageViewDataModel {
+    struct PackageViewDataModel: Equatable {
         let id: Int
         let name: String
         let countryName: String

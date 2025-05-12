@@ -1,8 +1,8 @@
 import Foundation
 
-struct CountriesListViewDataModel {
+struct CountriesListViewDataModel: Equatable {
     let countries: [CountrySelectableViewDataModel]
-    struct CountrySelectableViewDataModel {
+    struct CountrySelectableViewDataModel: Equatable {
         let id: Int
         let countryName: String
         let imageUrl: URL?

@@ -28,7 +28,7 @@ struct AiraloApp: App {
         }
     }
     
-    func registerFonts() {
+    private func registerFonts() {
         CustomFont.allCases.forEach { $0.register() }
     }
 }
