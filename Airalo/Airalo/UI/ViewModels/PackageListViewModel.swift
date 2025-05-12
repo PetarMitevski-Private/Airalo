@@ -3,10 +3,17 @@ import Combine
 import SwiftUI
 import AiraloUtils
 
+/// The view model for managing the state of the package list view.
 final class PackageListViewModel: ObservableObject {
     
+    // MARK: - Published Properties
+
+    /// The current state of the package list view.
     @Published var state: PackageListViewState = .loading
     
+    // MARK: - Initialiser
+
+    /// Initializes the view model with the given response state.
     init(responseState: CountryPackagesResponseState) {
         switch responseState {
         case .fetching:
@@ -20,6 +27,7 @@ final class PackageListViewModel: ObservableObject {
 }
 
 private extension CountryPackagesResponse {
+    /// Maps a `CountryPackagesResponse` to a `PackageListViewDataModel`.
     var mapToViewDataModel: PackageListViewDataModel {
         let packageViewDataModel = self.packages.map { package in
             let price = CurrencyNumberFormatter().string(from: package.price)

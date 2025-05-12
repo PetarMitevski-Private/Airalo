@@ -1,6 +1,7 @@
 import Combine
 import Foundation
 
+/// Local Implementation of the ModelType used for Previews
 final class StaticModel: ModelType {
     
     var localESimState: AnyPublisher<LocalEsimResponseState, Never> {
@@ -13,18 +14,14 @@ final class StaticModel: ModelType {
             .eraseToAnyPublisher()
     }
     
-    func getCountryPackagesState(for countryId: Int) {
-        // No-op in previews
-    }
+    func getCountryPackagesState(for countryId: Int) { }
     
-    func eventOccurred(_ event: Event) {
-        // No-op in previews
-    }
+    func eventOccurred(_ event: Event) { }
 }
 
 // MARK: - Static Mock Data
 
-private extension StaticModel {
+extension StaticModel {
     
     static var mockLocalEsims: [LocalEsimResponse] {
         [
@@ -70,5 +67,32 @@ private extension StaticModel {
                 )
             ]
         )
+    }
+    
+    static var placeholderPackageListViewDataModel: PackageListViewDataModel {
+        let packages = [
+            PackageViewDataModel(id: 0, name: "", countryName: "", data: "", validity: "", imageUrl: nil, price: "", startColor: .gray, endColor: .gray, style: .light),
+            PackageViewDataModel(id: 1, name: "", countryName: "", data: "", validity: "", imageUrl: nil, price: "", startColor: .gray, endColor: .gray, style: .light),
+            PackageViewDataModel(id: 2, name: "", countryName: "", data: "", validity: "", imageUrl: nil, price: "", startColor: .gray, endColor: .gray, style: .light),
+            PackageViewDataModel(id: 3, name: "", countryName: "", data: "", validity: "", imageUrl: nil, price: "", startColor: .gray, endColor: .gray, style: .light)
+        ]
+        
+        return PackageListViewDataModel(id: 0, title: "", packages: packages)
+    }
+    
+    static var placeholderCountriesListViewDataModel: CountriesListViewDataModel {
+        let countries: [CountrySelectableViewDataModel] = [
+            CountrySelectableViewDataModel(id: 0, countryName: "", imageUrl: nil),
+            CountrySelectableViewDataModel(id: 1, countryName: "", imageUrl: nil),
+            CountrySelectableViewDataModel(id: 2, countryName: "", imageUrl: nil),
+            CountrySelectableViewDataModel(id: 3, countryName: "", imageUrl: nil),
+            CountrySelectableViewDataModel(id: 4, countryName: "", imageUrl: nil),
+            CountrySelectableViewDataModel(id: 5, countryName: "", imageUrl: nil),
+            CountrySelectableViewDataModel(id: 6, countryName: "", imageUrl: nil),
+            CountrySelectableViewDataModel(id: 7, countryName: "", imageUrl: nil),
+            CountrySelectableViewDataModel(id: 8, countryName: "", imageUrl: nil),
+            CountrySelectableViewDataModel(id: 9, countryName: "", imageUrl: nil)
+        ]
+        return CountriesListViewDataModel(countries: countries)
     }
 }

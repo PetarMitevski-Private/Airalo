@@ -2,14 +2,21 @@ import SwiftUI
 import AiraloUIFoundations
 
 struct ErrorView: View {
+    
+    // MARK: - Private Properties
+    
     private let message: String
     private let onRetry: () -> Void
+    
+    // MARK: - Initialiser
     
     init(message: String = .staticMessage,
          onRetry: @escaping () -> Void) {
         self.message = message
         self.onRetry = onRetry
     }
+    
+    // MARK: - Body
     
     var body: some View {
         VStack(spacing: .spacing20) {
@@ -40,6 +47,8 @@ struct ErrorView: View {
         .background(Color.alabasterWhite)
         .padding(.horizontal, .spacing20)
     }
+    
+    // MARK: - Subviews
     
     private var emptyIcon: some View {
         Image(systemName: "x.square")

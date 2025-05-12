@@ -2,13 +2,18 @@ import SwiftUI
 import AiraloUIFoundations
 
 struct CountriesListView: View {
+    
+    // MARK: - Internal Properties
+    
     @EnvironmentObject var countriesListViewInteractor: CountriesListViewInteractor
+    
+    // MARK: - Body
     
     var body: some View {
         AiraloNavigationStack(title: .navigationTitle) {
             switch countriesListViewInteractor.countriesListViewModel.state {
             case .loading:
-                contentView(data: .placeholder)
+                contentView(data: StaticModel.placeholderCountriesListViewDataModel)
                     .redacted(reason: .placeholder)
                     .shimmering()
             case .ready(let data):
@@ -20,6 +25,8 @@ struct CountriesListView: View {
             }
         }
     }
+    
+    // MARK: - Subviews
     
     private func contentView(data: CountriesListViewDataModel) -> some View {
         ScrollView {
@@ -46,24 +53,6 @@ struct CountriesListView: View {
 private extension String {
     static let navigationTitle = "Hello"
     static let countriesListTitle = "Popular Countries"
-}
-
-private extension CountriesListViewDataModel {
-    static let placeholder: CountriesListViewDataModel = {
-        let countries: [CountrySelectableViewDataModel] = [
-            CountrySelectableViewDataModel(id: 0, countryName: "", imageUrl: nil),
-            CountrySelectableViewDataModel(id: 1, countryName: "", imageUrl: nil),
-            CountrySelectableViewDataModel(id: 2, countryName: "", imageUrl: nil),
-            CountrySelectableViewDataModel(id: 3, countryName: "", imageUrl: nil),
-            CountrySelectableViewDataModel(id: 4, countryName: "", imageUrl: nil),
-            CountrySelectableViewDataModel(id: 5, countryName: "", imageUrl: nil),
-            CountrySelectableViewDataModel(id: 6, countryName: "", imageUrl: nil),
-            CountrySelectableViewDataModel(id: 7, countryName: "", imageUrl: nil),
-            CountrySelectableViewDataModel(id: 8, countryName: "", imageUrl: nil),
-            CountrySelectableViewDataModel(id: 9, countryName: "", imageUrl: nil)
-        ]
-        return CountriesListViewDataModel(countries: countries)
-    }()
 }
 
 #Preview {

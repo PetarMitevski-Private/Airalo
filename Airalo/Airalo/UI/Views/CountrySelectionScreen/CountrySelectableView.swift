@@ -2,11 +2,18 @@ import SwiftUI
 import AiraloUIFoundations
 
 struct CountrySelectableView: View {
+    
+    // MARK: - Private Properties
+
     private let country: CountrySelectableViewDataModel
+    
+    // MARK: - Initialiser
     
     init(country: CountrySelectableViewDataModel) {
         self.country = country
     }
+    
+    // MARK: - Body
     
     var body: some View {
         HStack(spacing: .spacing14) {
@@ -22,6 +29,8 @@ struct CountrySelectableView: View {
         .shadow(.dropShadow)
         .padding(.horizontal, .spacing20)
     }
+    
+    // MARK: - Subviews
     
     private var countryName: some View {
         Text(country.countryName)

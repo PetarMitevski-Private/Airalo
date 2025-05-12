@@ -1,5 +1,7 @@
 import SwiftUI
 
+///This is an extension for the `Color` struct that allows you to initialize a `Color` object using a
+///hexadecimal color string (e.g., #RRGGBB format).
 public extension Color {
     init(hex: String) {
         let scanner = Scanner(string: hex.trimmingCharacters(in: .whitespacesAndNewlines))
