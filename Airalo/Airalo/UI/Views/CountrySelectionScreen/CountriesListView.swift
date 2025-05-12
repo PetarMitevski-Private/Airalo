@@ -30,7 +30,7 @@ struct CountriesListView: View {
                     .padding(.top)
                 
                 ForEach(data.countries, id: \.id) { country in
-                    NavigationLink(destination: PackagesView(id: country.id,
+                    NavigationLink(destination: PackagesListView(id: country.id,
                                                              countryName: country.countryName)) {
                         CountrySelectableView(country: country)
                     }
@@ -64,4 +64,9 @@ private extension CountriesListViewDataModel {
         ]
         return CountriesListViewDataModel(countries: countries)
     }()
+}
+
+#Preview {
+    CountriesListView()
+        .environmentObject(CountriesListViewInteractor(model: StaticModel()))
 }

@@ -16,7 +16,7 @@ final class PackageListViewInteractor: ObservableObject {
     
     func didAppear(id: Int) {
         model.getCountryPackagesState(for: id)
-        model.countryPackagesStateSubject
+        model.countryPackagesState
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 self?.packageListViewModel = PackageListViewModel(responseState: .error)

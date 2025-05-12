@@ -37,6 +37,7 @@ struct ErrorView: View {
                 
             }
         }
+        .background(Color.alabasterWhite)
         .padding(.horizontal, .spacing20)
     }
     
@@ -68,7 +69,5 @@ private extension String {
 }
 
 #Preview {
-    ErrorView(onRetry: {
-        
-    })
+    ErrorView(onRetry: { })
 }

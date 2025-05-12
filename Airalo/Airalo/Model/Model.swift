@@ -7,7 +7,7 @@ final class Model: ModelType {
         _localESimState.eraseToAnyPublisher()
     }
     
-    var countryPackagesStateSubject: AnyPublisher<CountryPackagesResponseState, Never> {
+    var countryPackagesState: AnyPublisher<CountryPackagesResponseState, Never> {
         _countryPackagesStateSubject.eraseToAnyPublisher()
     }
     
